@@ -1,0 +1,391 @@
+/* --------------------------------- Global --------------------------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Fonts */
+  --font-titles: "Montserrat", sans-serif;
+  --font-normal: "Outfit", sans-serif;
+
+  /* Colors */
+  --Neutrals-10: #f4f1f8;
+  --Neutrals-50: #afafaf;
+  --OrangePrime: #ff7700;
+  --OrangePrime-50: #ff770061;
+  --White: #ffffff;
+  --Black: #000000;
+
+  /* Font Weight */
+
+  --text-regular: 400;
+  --text-medium: 500;
+  --text-bold: 700;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--Neutrals-10);
+  font-size: 1.6rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-width: 1440px;
+  width: 90%;
+  margin: 4.8rem auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-titles);
+  font-weight: var(--text-bold);
+}
+
+p,
+a,
+label,
+input,
+select,
+.pSecondary {
+  font-family: var(--font-normal);
+  font-weight: var(--text-regular);
+  font-size: 1.6rem;
+  min-height: 2.4rem;
+}
+
+/* --------------------------------- vvvvvvvvvvvvv result to be calculated by .js vvvvvvvvvvvvv --------------------------------- */
+#exampleResult {
+  font-family: var(--font-normal);
+  font-weight: var(--text-regular);
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------ */
+
+h1 {
+  font-size: 9.2rem;
+  letter-spacing: -2px;
+}
+
+.headerSecondary {
+  color: var(--Neutrals-50);
+  font-weight: var(--text-regular);
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+.h2secondary {
+  color: var(--Neutrals-50);
+  font-weight: var(--text-medium);
+}
+
+.h2colored {
+  color: var(--OrangePrime);
+  font-weight: var(--text-medium);
+}
+
+h3 {
+  font-size: 3.6rem;
+}
+
+.pSecondary,
+.label {
+  color: var(--Neutrals-50);
+}
+
+a {
+  text-decoration: none;
+  color: var(--OrangePrime);
+}
+
+a:hover :active {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--OrangePrime);
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* ---------------------------------- Sections ---------------------------------- */
+
+/* Universal Section Configuration */
+
+.sectionStyle {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--White);
+  border-radius: 8px;
+}
+
+/* Hero section */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  background-color: var(--White);
+  padding: 2.8rem 2.8rem;
+  border-radius: 8px;
+}
+
+/* Calculator */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: row;
+}
+
+#calculatorForm {
+  display: flex;
+  flex-direction: column;
+  padding: 2.8rem 2.8rem;
+  gap: 1.6rem;
+  border-right: var(--Neutrals-10) 2px dashed;
+}
+
+#resultArea {
+  display: flex;
+  flex-direction: column;
+  padding: 2.8rem 2.8rem;
+  border-right: var(--Neutrals-10) 2px dashed;
+}
+
+#result {
+  display: flex;
+  flex-direction: row;
+  transition: ease 100ms;
+}
+
+.result-value-pixels {
+  display: flex;
+}
+
+#exampleArea {
+  display: flex;
+  flex-direction: column;
+  padding: 2.8rem 2.8rem;
+  gap: 1.6rem;
+  max-height: 48rem;
+}
+
+#exampleArea p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  transition: ease 100ms;
+}
+
+@media screen and (max-width: 900px) {
+  .calculator {
+    flex-direction: column;
+  }
+
+  #calculatorForm {
+    border-right: none;
+    border-bottom: var(--Neutrals-10) 2px dashed;
+  }
+
+  #resultArea {
+    border-right: none;
+    border-bottom: var(--Neutrals-10) 2px dashed;
+  }
+}
+
+/* Popular Sizes Section */
+
+.popularSizeMultiplier {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+
+.sizeList {
+  display: flex;
+  justify-content: stretch;
+}
+
+.sizeList li {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-right: var(--Neutrals-10) 2px solid;
+}
+
+.sizeList li:last-child {
+  border: none;
+}
+
+.sizeList li div {
+  display: flex;
+  flex-direction: column;
+  padding: 2.8rem 2.8rem;
+  border-bottom: var(--Neutrals-10) 2px dashed;
+}
+
+.sizeCard div:last-child {
+  border: none;
+}
+
+@media screen and (max-width: 900px) {
+  .sizeList {
+    flex-direction: column;
+  }
+
+  .sizeList li {
+    border-right: none;
+    border-bottom: var(--Neutrals-10) 2px solid;
+  }
+}
+
+/* Footer */
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2.8rem 2.8rem;
+  background-color: var(--White);
+}
+
+.SocialLink {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  #footer {
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: center;
+  }
+}
+
+/* --------------------------------- Components --------------------------------- */
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.8rem 2.8rem;
+  border-bottom: var(--Neutrals-10) 2px dashed;
+}
+
+.svgIcon {
+  width: 56px;
+  height: 56px;
+}
+
+input,
+select {
+  background-color: transparent;
+  border: none;
+  border-radius: 2px;
+}
+
+select {
+  appearance: none;
+}
+
+input,
+select:focus {
+  outline: none;
+}
+
+.labeledInput {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.select-container {
+  position: relative;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2px;
+  background-color: var(--Neutrals-10);
+  gap: 8px;
+  padding: 1.2rem 1.6rem;
+  cursor: pointer;
+  border: transparent;
+  user-select: none;
+}
+
+.inputWrapper:hover,
+.inputWrapper:active {
+  border: var(--OrangePrime-50) 1px solid;
+  margin: -1px;
+}
+
+.formula-list {
+  margin-top: 0.8rem;
+  position: absolute;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 0.8rem;
+  background-color: var(--White);
+  padding: 0.8rem 0.8rem;
+  border-radius: 2px;
+  z-index: 999;
+  box-shadow: 0px 4px 16px -4px rgba(0, 0, 0, 0.25);
+  user-select: none;
+}
+
+.active {
+  display: flex;
+}
+
+.icon-dropdown {
+  user-select: none;
+  transform: rotate(0deg);
+  transition: ease 300ms;
+}
+
+.icon-dropdown-rotated {
+  user-select: none;
+  transform: rotate(-180deg);
+}
+
+.active .formula-list i {
+  background-color: #ff7700;
+  transform: rotate(-180deg);
+}
+
+.list-item {
+  font-family: var(--font-normal);
+  background-color: var(--White);
+  padding: 1.2rem 1.6rem;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.list-item:hover {
+  background-color: var(--Neutrals-10);
+}
