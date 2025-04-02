@@ -75,6 +75,12 @@ h1 {
   letter-spacing: -2px;
 }
 
+@media screen and (max-width: 900px) {
+  :root {
+    font-size: 50%;
+  }
+}
+
 .headerSecondary {
   color: var(--Neutrals-50);
   font-weight: var(--text-regular);
@@ -254,8 +260,18 @@ main {
   }
 
   .sizeList li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     border-right: none;
     border-bottom: var(--Neutrals-10) 2px solid;
+    flex-grow: 1;
+  }
+  .sizeList li div {
+    display: flex;
+    flex-direction: column;
+    padding: 2.8rem 2.8rem;
+    border-right: var(--Neutrals-10) 2px dashed;
+    border-bottom: none;
   }
 }
 
@@ -280,7 +296,6 @@ main {
   #footer {
     flex-direction: column;
     gap: 1.6rem;
-    align-items: center;
   }
 }
 
@@ -291,6 +306,14 @@ main {
   justify-content: space-between;
   padding: 2.8rem 2.8rem;
   border-bottom: var(--Neutrals-10) 2px dashed;
+}
+
+@media screen and (max-width: 900px) {
+  .sectionHeader {
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: left;
+  }
 }
 
 .svgIcon {
