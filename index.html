@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TheTypeCalculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_drop_down"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header><!-- header placeholder --></header>
+      <section class="hero">
+        <img class="svgIcon" src="img/measurer.svg" alt="measurer" />
+        <h1>The Type Calculator</h1>
+        <p class="pSecondary">
+          The best and ultimate tool to count different type stuff
+        </p>
+      </section>
+
+      <main>
+        <section class="sectionStyle">
+          <div class="sectionHeader">
+            <h2>Line Height Calculator</h2>
+          </div>
+          <div class="calculator">
+            <form id="calculatorForm">
+              <div class="labeledInput">
+                <label for="formula" class="label">Select Formula</label>
+                <div class="select-container">
+                  <div class="inputWrapper js-input-container">
+                    <span class="pSecondary js-input-selected"
+                      >Default 1.4x</span
+                    >
+                    <i
+                      class="material-symbols-outlined js-icon-dropdown icon-dropdown"
+                    >
+                      arrow_drop_down
+                    </i>
+                  </div>
+                  <ul class="formula-list js-formula-list"></ul>
+                </div>
+              </div>
+              <div class="labeledInput">
+                <label for="fontSize" class="label">Font Size</label>
+                <div class="inputWrapper">
+                  <input
+                    class="js-input-font-size"
+                    type="number"
+                    placeholder="24"
+                  />
+                  <p class="pSecondary">px</p>
+                </div>
+              </div>
+            </form>
+
+            <!-- the results being calculated currently is a placeholder -->
+
+            <div id="resultArea">
+              <p class="pSecondary">Line height:</p>
+              <div class="result-value-pixels">
+                <h1 class="js-result-size">34</h1>
+                <h1 class="headerSecondary">px</h1>
+              </div>
+            </div>
+
+            <!-- the examples with texts Calculated  -->
+
+            <div id="exampleArea">
+              <p class="pSecondary">Text Example:</p>
+              <p
+                id="exampleResult"
+                class="js-example-paragraph"
+                style="font-size: 24; line-height: 34px"
+              >
+                The quick brown fox, with its sleek, russet fur glinting in the
+                sunlight, effortlessly leaps over the lazy dog lounging in the
+                shade of the old oak tree. The dog, barely stirring from its
+                slumber, lets out a soft yawn as the fox lands gracefully on the
+                other side, its sharp eyes scanning the meadow for any signs of
+                movement.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Popular Sizes  -->
+
+        <section class="sectionStyle">
+          <div class="sectionHeader">
+            <h2>Popular Sizes</h2>
+            <div class="popularSizeMultiplier">
+              <h2 class="h2secondary">Multiplier</h2>
+              <h2 class="h2colored js-pop-multi-number">1.2x</h2>
+            </div>
+          </div>
+          <ul class="sizeList js-size-list"></ul>
+        </section>
+      </main>
+
+      <footer id="footer" class="sectionStyle">
+        <p>All Right Not reserved 2025 ©</p>
+        <div class="SocialLink">
+          <a href="https://www.instagram.com/zhuravlev_life/"
+            >Any feature missing? Message me on Instagramm</a
+          >
+          <img src="img/instagram.svg" alt="" />
+        </div>
+      </footer>
+    </div>
+  </body>
+  <!-- <script type="module" src="font-formula-dropdown.js"></script> -->
+  <script type="module" src="./scripts/popular-sizes.js"></script>
+  <script type="module" src="./scripts/script.js"></script>
+</html>
