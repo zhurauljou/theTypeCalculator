@@ -31,6 +31,8 @@
 body {
   background-color: var(--Neutrals-10);
   font-size: 1.6rem;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
